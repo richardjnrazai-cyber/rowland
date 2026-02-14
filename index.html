@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine Darya ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+.message {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff4d6d;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ffe3ec;
+    transform: scale(1.05);
+}
+
+/* falling flowers */
+.flower {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy Valentine's Day My Beautiful Darya 🌸❤️</h1>
+
+<div class="message">
+My dearest Darya,<br><br>
+
+On this special day, I just want to remind you how much you truly mean to me.  
+You are my happiness, my peace, and the most beautiful part of my world. 💕<br><br>
+
+Every moment with you is a blessing, and I cherish every smile, every laugh, and every memory we create together.<br><br>
+
+I love you deeply, and I look forward to building a beautiful future together — side by side, heart to heart.<br><br>
+
+Happy Valentine’s Day, my love.<br>
+Forever yours,<br>
+Rowland ❤️
+</div>
+
+<button onclick="showLove()">Click For My Heart 💌</button>
+
+<div class="gallery">
+    <img src="photo1.jpg" alt="Our Memory 1">
+    <img src="photo2.jpg" alt="Our Memory 2">
+    <img src="photo3.jpg" alt="Our Memory 3">
+</div>
+
+</div>
+
+<script>
+function showLove() {
+    alert("Darya, I choose you today, tomorrow, and always. I love you ❤️ - Rowland");
+}
+
+function createFlower() {
+    const flower = document.createElement("div");
+    flower.className = "flower";
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 8000);
+}
+
+setInterval(createFlower, 600);
+</script>
+
+</body>
+</html>
